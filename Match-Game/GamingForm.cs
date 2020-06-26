@@ -31,12 +31,14 @@ namespace Match_Game
             LevelValue.Text = "1";
 
             //Restarting the game
-            Form1_Load(sender, e);
+            GamingForm_Load(sender, e);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void GamingForm_Load(object sender, EventArgs e)
         {
             startCountdownLabel.Text = "3"; //Label Displaying the time before cards are flipped to Cover mode
+
+            NextLevelScore.Text = LevelUp.ToString(); // Label Displaying total score to the next level
 
             // Randomize pictureBoxes's location 
             // Add pictureBox location to a list
@@ -148,6 +150,7 @@ namespace Match_Game
             //Increment level of the game by increasing required score and decreasing Time Limit
             Score += Convert.ToInt32(ScoreCounter.Text);
             MessageBox.Show("Next Level!");
+
             if (Convert.ToInt32(ScoreCounter.Text) >= LevelUp)
             {
                 ScoreCounter.Text = "0";
@@ -160,7 +163,8 @@ namespace Match_Game
                     MessageBox.Show("Thanks for Playing! You've completed the game");
                     Application.Exit();
                 }
-                Form1_Load(this, null);
+
+                GamingForm_Load(this, null);
             }
             else
             {

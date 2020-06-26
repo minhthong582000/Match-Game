@@ -62,6 +62,8 @@
             this.levelLabel = new System.Windows.Forms.Label();
             this.ScoreTimer = new System.Windows.Forms.Timer(this.components);
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.NextLevelLabel = new System.Windows.Forms.Label();
+            this.NextLevelScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox15)).BeginInit();
@@ -228,12 +230,12 @@
             this.TimeLeft.BackColor = System.Drawing.Color.Transparent;
             this.TimeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLeft.ForeColor = System.Drawing.SystemColors.Control;
-            this.TimeLeft.Location = new System.Drawing.Point(985, 109);
+            this.TimeLeft.Location = new System.Drawing.Point(985, 118);
             this.TimeLeft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TimeLeft.Name = "TimeLeft";
-            this.TimeLeft.Size = new System.Drawing.Size(49, 32);
+            this.TimeLeft.Size = new System.Drawing.Size(32, 32);
             this.TimeLeft.TabIndex = 14;
-            this.TimeLeft.Text = "60";
+            this.TimeLeft.Text = "0";
             // 
             // TimeLabel
             // 
@@ -241,7 +243,7 @@
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.TimeLabel.Location = new System.Drawing.Point(791, 109);
+            this.TimeLabel.Location = new System.Drawing.Point(791, 118);
             this.TimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(159, 32);
@@ -258,7 +260,7 @@
             this.resetButton.BackColor = System.Drawing.Color.Transparent;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.resetButton.Location = new System.Drawing.Point(797, 155);
+            this.resetButton.Location = new System.Drawing.Point(797, 220);
             this.resetButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(232, 72);
@@ -339,7 +341,7 @@
             this.LevelValue.BackColor = System.Drawing.Color.Transparent;
             this.LevelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LevelValue.ForeColor = System.Drawing.SystemColors.Control;
-            this.LevelValue.Location = new System.Drawing.Point(935, 23);
+            this.LevelValue.Location = new System.Drawing.Point(985, 23);
             this.LevelValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LevelValue.Name = "LevelValue";
             this.LevelValue.Size = new System.Drawing.Size(32, 32);
@@ -364,7 +366,7 @@
             this.ScoreCounter.BackColor = System.Drawing.Color.Transparent;
             this.ScoreCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoreCounter.ForeColor = System.Drawing.SystemColors.Control;
-            this.ScoreCounter.Location = new System.Drawing.Point(934, 68);
+            this.ScoreCounter.Location = new System.Drawing.Point(985, 68);
             this.ScoreCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScoreCounter.Name = "ScoreCounter";
             this.ScoreCounter.Size = new System.Drawing.Size(32, 32);
@@ -479,12 +481,39 @@
             this.GamePanel.Size = new System.Drawing.Size(732, 663);
             this.GamePanel.TabIndex = 9;
             // 
+            // NextLevelLabel
+            // 
+            this.NextLevelLabel.AutoSize = true;
+            this.NextLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NextLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextLevelLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.NextLevelLabel.Location = new System.Drawing.Point(791, 164);
+            this.NextLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NextLevelLabel.Name = "NextLevelLabel";
+            this.NextLevelLabel.Size = new System.Drawing.Size(168, 32);
+            this.NextLevelLabel.TabIndex = 18;
+            this.NextLevelLabel.Text = "Next Level:";
+            // 
+            // NextLevelScore
+            // 
+            this.NextLevelScore.AutoSize = true;
+            this.NextLevelScore.BackColor = System.Drawing.Color.Transparent;
+            this.NextLevelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextLevelScore.ForeColor = System.Drawing.SystemColors.Control;
+            this.NextLevelScore.Location = new System.Drawing.Point(985, 164);
+            this.NextLevelScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NextLevelScore.Name = "NextLevelScore";
+            this.NextLevelScore.Size = new System.Drawing.Size(0, 32);
+            this.NextLevelScore.TabIndex = 19;
+            // 
             // GamingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1056, 690);
+            this.Controls.Add(this.NextLevelScore);
+            this.Controls.Add(this.NextLevelLabel);
             this.Controls.Add(this.startCountdownLabel);
             this.Controls.Add(this.TimeLeft);
             this.Controls.Add(this.TimeLabel);
@@ -496,7 +525,7 @@
             this.Controls.Add(this.GamePanel);
             this.Name = "GamingForm";
             this.Text = "Match Game";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.GamingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PicBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox15)).EndInit();
@@ -558,6 +587,8 @@
         private System.Windows.Forms.Label levelLabel;
         private System.Windows.Forms.Timer ScoreTimer;
         private System.Windows.Forms.Panel GamePanel;
+        private System.Windows.Forms.Label NextLevelLabel;
+        private System.Windows.Forms.Label NextLevelScore;
     }
 }
 
